@@ -9,6 +9,7 @@ pipeline {
     		 docker build . -t som3a97/fromjenkins:v1
     		 docker login -u ${user} -p ${pass}
     		 docker push som3a97/fromjenkins:v1
+    		 echo done
     		"""
                 }
             }

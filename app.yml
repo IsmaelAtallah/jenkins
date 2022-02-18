@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: som3a97/fromjenkins:v4
+        image: som3a97/fromjenkins:v6
         ports:
         - containerPort: 80
 ---

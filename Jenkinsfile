@@ -18,6 +18,7 @@ pipeline {
             steps {
                 sh """
                 kubectl apply -f app.yml
+                echo done
             """
             }
         }

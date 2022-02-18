@@ -10,18 +10,11 @@ pipeline {
     		 docker login -u ${user} -p ${pass}
     		 docker push som3a97/fromjenkins:v4
     		 echo done
+             kubectl apply -f app.yml
     		"""
                 }
             }
         }
-        stage('Hello') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker_cer', passwordVariable: 'pass', usernameVariable: 'user')])       {
-    		sh """
-    		 kubectl apply -f app.yml
-    		"""
-                }
-            }
         }
     }
 }

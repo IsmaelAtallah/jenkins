@@ -3,5 +3,5 @@
 #COPY dragon.jpg /usr/local/apache2/htdocs/
 #CMD ["httpd-foreground"]
 FROM nginx:latest
-COPY . /usr/share/nginx/html
+COPY ./web/ /usr/share/nginx/html
 
